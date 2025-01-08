@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://media.giphy.com/media/l1J3rGigrYfx8aKqI/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.item h3 {
+    margin: 10px 0;
+}

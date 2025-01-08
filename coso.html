@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Interactivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div style="display: flex; height: 100vh;">
+        <!-- Menú lateral -->
+        <nav class="nav" style="width: 20%; background: rgba(255, 255, 255, 0.9);">
+            <ul class="list">
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="assets/star.svg" class="list__img">
+                        <a href="#" class="nav__link" id="inicio-link">Inicio</a>
+                    </div>
+                </li>
+
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="assets/shirt.svg" class="list__img">
+                        <a href="#playeras" class="nav__link">Playeras</a>
+                        <img src="assets/arrow.svg" class="list__arrow">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-filter="niño">Niño</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-filter="adulto">Adulto</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="assets/envio.svg" class="list__img">
+                        <a href="#formulario-envio" class="nav__link">Pedidos</a>
+                        <img src="assets/arrow.svg" class="list__arrow">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <form class="nav__link nav__link--inside" id="pedido-form">
+                                <label for="nombre">Nombre Completo:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+                                <label for="direccion">Dirección de Envío:</label>
+                                <textarea id="direccion" name="direccion" placeholder="Tu dirección completa" required></textarea>
+
+                                <label for="producto">Selecciona la Playera:</label>
+                                <select id="producto" name="producto" required>
+                                    <option value="roja">Playera Roja</option>
+                                    <option value="azul">Playera Azul</option>
+                                    <option value="verde">Playera Verde</option>
+                                    <option value="verde">Playera Amarilla</option>
+                                    <option value="verde">Playera Blanca</option>
+                                    <option value="verde">Playera Negra</option>
+                                </select>
+
+                                <label for="cantidad">Cantidad:</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" placeholder="Cantidad" required>
+
+                                <button type="submit">Enviar Pedido</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Frame para mostrar la página de stock -->
+        <iframe id="stock-frame" src="stock.html" style="width: 80%; border: none;"></iframe>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
